@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Young Serif';
+    src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+@font-face{
+    font-family: 'Outfit';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Young Serif';
+    background-color:  hsl(30, 18%, 87%);
+    min-height: 100vh;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+.recipe{
+    background-color: white;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: 20px;
+    border-radius: 2rem;
+}
+.recipe > *{
+    width: 90%;
+}
+.recipe-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(330, 100%, 98%);
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem ;
+    font-family: 'Outfit';
+}
+.recipe-details > h2{
+    color: hsl(332, 51%, 32%);
+    font-size: larger;
+}
+.featured-img{
+    margin: 5%;
+    margin-bottom: 0;
+    border-radius: 1rem;
+}
+h2{
+    color:  hsl(14, 45%, 36%);
+}
+.section-title{
+    margin: 10px 0 20px 0;
+    font-weight: 700;
+}
+.section-title + *, .recipe-title + p{
+    font-family: 'Outfit';
+}
+hr{
+    width: 90%;
+    border:1px solid hsl(30, 18%, 87%);
+}
+li{
+    list-style-position: outside;
+}
+ol > li, ul > li{
+    margin: 0.5rem;
+    font-size: small;
+}
+ul {
+    list-style-type: none;
+}
+ul > li::before{
+    content: '•';
+    margin-right: 1.5rem;
+    font-weight: bold;
+    color:  hsl(14, 45%, 36%);
+}
+ol{
+    list-style: none;
+}
+ol > li{
+    counter-increment: step-counter;
+
+}
+
+ol > li::before{
+    content: counter(step-counter);
+    margin-right: 1.5rem;
+    font-weight: bold;
+    color:  hsl(14, 45%, 36%);
+}
+
+.nutrition-table{
+    width: 100%;
+}
+tr{
+    font-family: 'Outfit';
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+th{
+    font-weight: 400;
+}
+td{
+    width: 50%;
+    color: hsl(14, 45%, 36%);
+    font-weight: 700;
+}
+tr:last-child{
+    border-bottom: none;
+}
